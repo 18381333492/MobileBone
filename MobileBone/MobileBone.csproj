@@ -1,0 +1,680 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E830D7F8-C6D4-49CF-B14F-9F7FEAF755B6}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MobileBone</RootNamespace>
+    <AssemblyName>MobileBone</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.0.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\TestController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\mobilebone-master\.gitattributes" />
+    <Content Include="Content\mobilebone-master\.gitignore" />
+    <Content Include="Content\mobilebone-master\docs\data-ajax.html" />
+    <Content Include="Content\mobilebone-master\docs\data-ajaxKeys.html" />
+    <Content Include="Content\mobilebone-master\docs\data-callbackKeys.html" />
+    <Content Include="Content\mobilebone-master\docs\data-classPage.html" />
+    <Content Include="Content\mobilebone-master\docs\data-container.html" />
+    <Content Include="Content\mobilebone-master\docs\data-form.html" />
+    <Content Include="Content\mobilebone-master\docs\data-mask.html" />
+    <Content Include="Content\mobilebone-master\docs\data-params.html" />
+    <Content Include="Content\mobilebone-master\docs\data-preventDefault.html" />
+    <Content Include="Content\mobilebone-master\docs\data-rel.html" />
+    <Content Include="Content\mobilebone-master\docs\data-reload.html" />
+    <Content Include="Content\mobilebone-master\docs\data-root.html" />
+    <Content Include="Content\mobilebone-master\docs\data-title.html" />
+    <Content Include="Content\mobilebone-master\docs\docs.css" />
+    <Content Include="Content\mobilebone-master\docs\docs.js" />
+    <Content Include="Content\mobilebone-master\docs\index.html" />
+    <Content Include="Content\mobilebone-master\docs\Mobilebone.ajax.html" />
+    <Content Include="Content\mobilebone-master\docs\Mobilebone.autoInit.html" />
+    <Content Include="Content\mobilebone-master\docs\Mobilebone.captureForm.html" />
+    <Content Include="Content\mobilebone-master\docs\Mobilebone.captureLink.html" />
+    <Content Include="Content\mobilebone-master\docs\Mobilebone.classAnimation.html" />
+    <Content Include="Content\mobilebone-master\docs\Mobilebone.classMask.html" />
+    <Content Include="Content\mobilebone-master\docs\Mobilebone.classPage.html" />
+    <Content Include="Content\mobilebone-master\docs\Mobilebone.createPage.html" />
+    <Content Include="Content\mobilebone-master\docs\Mobilebone.evalScript.html" />
+    <Content Include="Content\mobilebone-master\docs\Mobilebone.getCleanUrl.html" />
+    <Content Include="Content\mobilebone-master\docs\Mobilebone.getFunction.html" />
+    <Content Include="Content\mobilebone-master\docs\Mobilebone.getPage.html" />
+    <Content Include="Content\mobilebone-master\docs\Mobilebone.handleTapEvent.html" />
+    <Content Include="Content\mobilebone-master\docs\Mobilebone.init.html" />
+    <Content Include="Content\mobilebone-master\docs\Mobilebone.isBack.html" />
+    <Content Include="Content\mobilebone-master\docs\Mobilebone.jsonHandle.html" />
+    <Content Include="Content\mobilebone-master\docs\Mobilebone.mergeCallback.html" />
+    <Content Include="Content\mobilebone-master\docs\Mobilebone.pushStateEnabled.html" />
+    <Content Include="Content\mobilebone-master\docs\Mobilebone.rootTransition.html" />
+    <Content Include="Content\mobilebone-master\docs\Mobilebone.submit.html" />
+    <Content Include="Content\mobilebone-master\docs\Mobilebone.support.html" />
+    <Content Include="Content\mobilebone-master\docs\Mobilebone.transition.html" />
+    <Content Include="Content\mobilebone-master\docs\Mobilebone.VERSION.html" />
+    <Content Include="Content\mobilebone-master\docs\nav.js" />
+    <Content Include="Content\mobilebone-master\docs\otherAnonymousAPIs.html" />
+    <Content Include="Content\mobilebone-master\examples\httpiancj.github.io-qq\index.html" />
+    <Content Include="Content\mobilebone-master\examples\mobile_makers\index.html" />
+    <Content Include="Content\mobilebone-master\index.html" />
+    <Content Include="Content\mobilebone-master\plugins\ppt\index.html" />
+    <Content Include="Content\mobilebone-master\plugins\ppt\mobilebone.ppt.js" />
+    <Content Include="Content\mobilebone-master\plugins\ppt\ppt.css" />
+    <Content Include="Content\mobilebone-master\src\mobilebone.animate.css" />
+    <Content Include="Content\mobilebone-master\src\mobilebone.css" />
+    <Content Include="Content\mobilebone-master\src\mobilebone.js" />
+    <Content Include="Content\mobilebone-master\test\ajax-html\ajax-page.html" />
+    <Content Include="Content\mobilebone-master\test\ajax-html\ajax-without-page.html" />
+    <Content Include="Content\mobilebone-master\test\ajax-html\b.html" />
+    <Content Include="Content\mobilebone-master\test\ajax-html\c.html" />
+    <Content Include="Content\mobilebone-master\test\ajax-html\index.html" />
+    <Content Include="Content\mobilebone-master\test\ajax-html\nosuffix\index.html" />
+    <Content Include="Content\mobilebone-master\test\ajax-json\index.html" />
+    <Content Include="Content\mobilebone-master\test\ajax-json\json-error.html" />
+    <Content Include="Content\mobilebone-master\test\ajax-json\json-success.html" />
+    <Content Include="Content\mobilebone-master\test\backbone\backbone-min.js" />
+    <Content Include="Content\mobilebone-master\test\backbone\backbone.js" />
+    <Content Include="Content\mobilebone-master\test\backbone\data.html" />
+    <Content Include="Content\mobilebone-master\test\backbone\find.html" />
+    <Content Include="Content\mobilebone-master\test\backbone\index.html" />
+    <Content Include="Content\mobilebone-master\test\backbone\underscore-min.js" />
+    <Content Include="Content\mobilebone-master\test\backbone\zepto.min.js" />
+    <Content Include="Content\mobilebone-master\test\base-slide\frozen.js" />
+    <Content Include="Content\mobilebone-master\test\base-slide\index.html" />
+    <Content Include="Content\mobilebone-master\test\base-slide\jquery.tap.js" />
+    <Content Include="Content\mobilebone-master\test\base-slide\zepto.js" />
+    <Content Include="Content\mobilebone-master\test\callback\index.html" />
+    <Content Include="Content\mobilebone-master\test\complex\css\wechat.css" />
+    <Content Include="Content\mobilebone-master\test\complex\img\account.png" />
+    <Content Include="Content\mobilebone-master\test\complex\img\head\contact-1.png" />
+    <Content Include="Content\mobilebone-master\test\complex\img\head\contact-2.png" />
+    <Content Include="Content\mobilebone-master\test\complex\img\head\contact-3.png" />
+    <Content Include="Content\mobilebone-master\test\complex\img\head\contact-4.png" />
+    <Content Include="Content\mobilebone-master\test\complex\img\head\contact-5.png" />
+    <Content Include="Content\mobilebone-master\test\complex\img\head\header-0.jpg" />
+    <Content Include="Content\mobilebone-master\test\complex\img\head\header-1.jpg" />
+    <Content Include="Content\mobilebone-master\test\complex\img\head\header-2.jpg" />
+    <Content Include="Content\mobilebone-master\test\complex\img\head\header-3.jpg" />
+    <Content Include="Content\mobilebone-master\test\complex\img\head\header-4.jpg" />
+    <Content Include="Content\mobilebone-master\test\complex\img\head\header-5.jpg" />
+    <Content Include="Content\mobilebone-master\test\complex\img\head\header-6.jpg" />
+    <Content Include="Content\mobilebone-master\test\complex\img\head\header-7.jpg" />
+    <Content Include="Content\mobilebone-master\test\complex\img\head\header-8.gif" />
+    <Content Include="Content\mobilebone-master\test\complex\img\head\public-1.png" />
+    <Content Include="Content\mobilebone-master\test\complex\img\head\public-2.png" />
+    <Content Include="Content\mobilebone-master\test\complex\img\head\public-3.png" />
+    <Content Include="Content\mobilebone-master\test\complex\img\head\public-4.png" />
+    <Content Include="Content\mobilebone-master\test\complex\img\icon-find.png" />
+    <Content Include="Content\mobilebone-master\test\complex\img\icon-footer.png" />
+    <Content Include="Content\mobilebone-master\test\complex\img\icon-header.png" />
+    <Content Include="Content\mobilebone-master\test\complex\img\icon-me.png" />
+    <Content Include="Content\mobilebone-master\test\complex\img\ok.png" />
+    <Content Include="Content\mobilebone-master\test\complex\img\screenshot\1.jpg" />
+    <Content Include="Content\mobilebone-master\test\complex\index.html" />
+    <Content Include="Content\mobilebone-master\test\complex\js\fastclick.js" />
+    <Content Include="Content\mobilebone-master\test\complex\js\iscroll-lite.js" />
+    <Content Include="Content\mobilebone-master\test\complex\js\wechat.js" />
+    <Content Include="Content\mobilebone-master\test\complex\js\zepto-docs.js" />
+    <Content Include="Content\mobilebone-master\test\fixed-header-footer\1.html" />
+    <Content Include="Content\mobilebone-master\test\fixed-header-footer\2.html" />
+    <Content Include="Content\mobilebone-master\test\fixed-header-footer\a.html" />
+    <Content Include="Content\mobilebone-master\test\fixed-header-footer\b.html" />
+    <Content Include="Content\mobilebone-master\test\fixed-header-footer\index.html" />
+    <Content Include="Content\mobilebone-master\test\form-submit\form.html" />
+    <Content Include="Content\mobilebone-master\test\form-submit\index.html" />
+    <Content Include="Content\mobilebone-master\test\form-submit\search.html" />
+    <Content Include="Content\mobilebone-master\test\form-submit\zxx.lib.css" />
+    <Content Include="Content\mobilebone-master\test\history\ajax-page.html" />
+    <Content Include="Content\mobilebone-master\test\history\history.html" />
+    <Content Include="Content\mobilebone-master\test\history\index.html" />
+    <Content Include="Content\mobilebone-master\test\index.html" />
+    <Content Include="Content\mobilebone-master\test\inner-slide\ajax-page.html" />
+    <Content Include="Content\mobilebone-master\test\inner-slide\index.html" />
+    <Content Include="Content\mobilebone-master\test\modular-load\1.js" />
+    <Content Include="Content\mobilebone-master\test\modular-load\2.js" />
+    <Content Include="Content\mobilebone-master\test\modular-load\3.js" />
+    <Content Include="Content\mobilebone-master\test\modular-load\index.html" />
+    <Content Include="Content\mobilebone-master\test\modular-load\main.js" />
+    <Content Include="Content\mobilebone-master\test\modular-load\require.html" />
+    <Content Include="Content\mobilebone-master\test\modular-load\require.js" />
+    <Content Include="Content\mobilebone-master\test\modular-load\sea.js" />
+    <Content Include="Content\mobilebone-master\test\prevent-default\form.html" />
+    <Content Include="Content\mobilebone-master\test\prevent-default\index.html" />
+    <Content Include="Content\mobilebone-master\test\prevent-default\other.html" />
+    <Content Include="Content\mobilebone-master\test\prevent-default\search.html" />
+    <Content Include="Content\mobilebone-master\test\prevent-default\zxx.lib.css" />
+    <Content Include="Content\mobilebone-master\test\test.css" />
+    <Content Include="Content\mobilebone-master\test\transition\animate.css" />
+    <Content Include="Content\mobilebone-master\test\transition\index.html" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="haitao\alipay.html" />
+    <Content Include="haitao\car.html" />
+    <Content Include="haitao\category.html" />
+    <Content Include="haitao\css\app.css" />
+    <Content Include="haitao\css\feedback.css" />
+    <Content Include="haitao\css\home.css" />
+    <Content Include="haitao\css\icons-extra.css" />
+    <Content Include="haitao\css\mui.dtpicker.css" />
+    <Content Include="haitao\css\mui.imageviewer.css" />
+    <Content Include="haitao\css\mui.indexedlist.css" />
+    <Content Include="haitao\css\mui.listpicker.css" />
+    <Content Include="haitao\css\mui.min.css" />
+    <Content Include="haitao\css\mui.picker.all.css" />
+    <Content Include="haitao\css\mui.picker.css" />
+    <Content Include="haitao\css\mui.picker.min.css" />
+    <Content Include="haitao\css\mui.poppicker.css" />
+    <Content Include="haitao\dope.html" />
+    <Content Include="haitao\favicon.ico" />
+    <Content Include="haitao\hot.html" />
+    <Content Include="haitao\images\60x60.gif" />
+    <Content Include="haitao\images\ad1.jpg" />
+    <Content Include="haitao\images\ad2.jpg" />
+    <Content Include="haitao\images\ad3.jpg" />
+    <Content Include="haitao\images\ad4.jpg" />
+    <Content Include="haitao\images\aui-logo.png" />
+    <Content Include="haitao\images\banner.jpg" />
+    <Content Include="haitao\images\banner1.jpg" />
+    <Content Include="haitao\images\bd1.jpg" />
+    <Content Include="haitao\images\bd2.jpg" />
+    <Content Include="haitao\images\bd3.jpg" />
+    <Content Include="haitao\images\bd4.jpg" />
+    <Content Include="haitao\images\bd5.jpg" />
+    <Content Include="haitao\images\bd6.jpg" />
+    <Content Include="haitao\images\cbd.jpg" />
+    <Content Include="haitao\images\hot.jpg" />
+    <Content Include="haitao\images\hots.jpg" />
+    <Content Include="haitao\images\icon\icon-1.png" />
+    <Content Include="haitao\images\icon\icon-2.png" />
+    <Content Include="haitao\images\icon\icon-3.png" />
+    <Content Include="haitao\images\icon\icon-4.png" />
+    <Content Include="haitao\images\icon\top.png" />
+    <Content Include="haitao\images\icon\tz-1.png" />
+    <Content Include="haitao\images\icon\tz-2.png" />
+    <Content Include="haitao\images\icon\tz-3.png" />
+    <Content Include="haitao\images\login-1.png" />
+    <Content Include="haitao\images\logo.png" />
+    <Content Include="haitao\images\miao.jpg" />
+    <Content Include="haitao\images\muwu.jpg" />
+    <Content Include="haitao\images\page.jpg" />
+    <Content Include="haitao\images\page1.jpg" />
+    <Content Include="haitao\images\q1.png" />
+    <Content Include="haitao\images\q10.png" />
+    <Content Include="haitao\images\q11.png" />
+    <Content Include="haitao\images\q12.png" />
+    <Content Include="haitao\images\q13.png" />
+    <Content Include="haitao\images\q14.png" />
+    <Content Include="haitao\images\q15.png" />
+    <Content Include="haitao\images\q16.png" />
+    <Content Include="haitao\images\q2.png" />
+    <Content Include="haitao\images\q3.png" />
+    <Content Include="haitao\images\q4.png" />
+    <Content Include="haitao\images\q5.png" />
+    <Content Include="haitao\images\q6.png" />
+    <Content Include="haitao\images\q7.png" />
+    <Content Include="haitao\images\q8.png" />
+    <Content Include="haitao\images\q9.png" />
+    <Content Include="haitao\images\qrcode.png" />
+    <Content Include="haitao\images\qz-1.jpg" />
+    <Content Include="haitao\images\qz-2.jpg" />
+    <Content Include="haitao\images\qz-3.jpg" />
+    <Content Include="haitao\images\qz-4.jpg" />
+    <Content Include="haitao\images\shuijiao.jpg" />
+    <Content Include="haitao\images\yuantiao.jpg" />
+    <Content Include="haitao\index.html" />
+    <Content Include="haitao\js\95516.js" />
+    <Content Include="haitao\js\ad.js" />
+    <Content Include="haitao\js\arttmpl.js" />
+    <Content Include="haitao\js\beecloud.js" />
+    <Content Include="haitao\js\city.data-3.js" />
+    <Content Include="haitao\js\city.data.js" />
+    <Content Include="haitao\js\feedback.js" />
+    <Content Include="haitao\js\mui.dtpicker.js" />
+    <Content Include="haitao\js\mui.imageViewer.js" />
+    <Content Include="haitao\js\mui.indexedlist.js" />
+    <Content Include="haitao\js\mui.js" />
+    <Content Include="haitao\js\mui.lazyload.img.js" />
+    <Content Include="haitao\js\mui.lazyload.js" />
+    <Content Include="haitao\js\mui.listpicker.js" />
+    <Content Include="haitao\js\mui.locker.js" />
+    <Content Include="haitao\js\mui.min.js" />
+    <Content Include="haitao\js\mui.picker.all.js" />
+    <Content Include="haitao\js\mui.picker.js" />
+    <Content Include="haitao\js\mui.picker.min.js" />
+    <Content Include="haitao\js\mui.poppicker.js" />
+    <Content Include="haitao\js\mui.previewimage.js" />
+    <Content Include="haitao\js\mui.pullToRefresh.js" />
+    <Content Include="haitao\js\mui.pullToRefresh.material.js" />
+    <Content Include="haitao\js\mui.view.js" />
+    <Content Include="haitao\js\mui.zoom.js" />
+    <Content Include="haitao\js\update.js" />
+    <Content Include="haitao\js\webviewGroup.js" />
+    <Content Include="haitao\kill.html" />
+    <Content Include="haitao\libs\echarts-all.js" />
+    <Content Include="haitao\libs\kill.html" />
+    <Content Include="haitao\login.html" />
+    <Content Include="haitao\me.html" />
+    <Content Include="haitao\new.html" />
+    <Content Include="haitao\news.html" />
+    <Content Include="haitao\order.html" />
+    <Content Include="haitao\page.html" />
+    <Content Include="haitao\register.html" />
+    <Content Include="haitao\search.html" />
+    <Content Include="haitao\suit.html" />
+    <Content Include="Scripts\ai.0.22.9-build00167.js" />
+    <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\mobilebone-master\bower.json" />
+    <Content Include="Content\mobilebone-master\LICENSE-MIT" />
+    <Content Include="Content\mobilebone-master\package.json" />
+    <Content Include="Content\mobilebone-master\ReadMe.md" />
+    <Content Include="Content\mobilebone-master\test\ajax-html\root-reload.php" />
+    <Content Include="Content\mobilebone-master\test\backbone\backbone-min.map" />
+    <Content Include="Content\mobilebone-master\test\backbone\underscore-min.map" />
+    <Content Include="Content\mobilebone-master\test\form-submit\submit.php" />
+    <Content Include="Content\mobilebone-master\test\prevent-default\submit.php" />
+    <Content Include="shangcheng\AddAddress.html" />
+    <Content Include="shangcheng\allorder.html" />
+    <Content Include="shangcheng\category.html" />
+    <Content Include="shangcheng\css\mui.css" />
+    <Content Include="shangcheng\css\mui.min.css" />
+    <Content Include="shangcheng\css\style.css" />
+    <Content Include="shangcheng\images\1.jpg" />
+    <Content Include="shangcheng\images\14827402454984.gif" />
+    <Content Include="shangcheng\images\14933579284363.jpg" />
+    <Content Include="shangcheng\images\14933579338924.jpg" />
+    <Content Include="shangcheng\images\14933579611488.jpg" />
+    <Content Include="shangcheng\images\14933579671679.jpg" />
+    <Content Include="shangcheng\images\14933579743170.jpg" />
+    <Content Include="shangcheng\images\14933579781940.jpg" />
+    <Content Include="shangcheng\images\14933685985825.jpg" />
+    <Content Include="shangcheng\images\14933686034193.jpg" />
+    <Content Include="shangcheng\images\14933686211869.jpg" />
+    <Content Include="shangcheng\images\14933686276330.jpg" />
+    <Content Include="shangcheng\images\14933686642279.jpg" />
+    <Content Include="shangcheng\images\14933686644650.jpg" />
+    <Content Include="shangcheng\images\14933686646147.jpg" />
+    <Content Include="shangcheng\images\14933688209563.jpg" />
+    <Content Include="shangcheng\images\2.jpg" />
+    <Content Include="shangcheng\images\3.jpg" />
+    <Content Include="shangcheng\images\4.jpg" />
+    <Content Include="shangcheng\images\5.jpg" />
+    <Content Include="shangcheng\images\6.jpg" />
+    <Content Include="shangcheng\images\7.jpg" />
+    <Content Include="shangcheng\images\8.jpg" />
+    <Content Include="shangcheng\images\a.jpg" />
+    <Content Include="shangcheng\images\adv.jpg" />
+    <Content Include="shangcheng\images\banner.jpg" />
+    <Content Include="shangcheng\images\banner1.jpg" />
+    <Content Include="shangcheng\images\bg_empty_list.png" />
+    <Content Include="shangcheng\images\btn_bargain.png" />
+    <Content Include="shangcheng\images\btn_consignee_address.png" />
+    <Content Include="shangcheng\images\btn_distribution.png" />
+    <Content Include="shangcheng\images\btn_exchange.png" />
+    <Content Include="shangcheng\images\btn_goods_collection.png" />
+    <Content Include="shangcheng\images\btn_groupon.png" />
+    <Content Include="shangcheng\images\btn_popularize.png" />
+    <Content Include="shangcheng\images\btn_recharge_card.png" />
+    <Content Include="shangcheng\images\btn_recommend.png" />
+    <Content Include="shangcheng\images\btn_review.png" />
+    <Content Include="shangcheng\images\btn_sign_off.png" />
+    <Content Include="shangcheng\images\btn_user_info.png" />
+    <Content Include="shangcheng\images\default_user_portrait_0.png" />
+    <Content Include="shangcheng\images\f1.jpg" />
+    <Content Include="shangcheng\images\f2.jpg" />
+    <Content Include="shangcheng\images\f3.jpg" />
+    <Content Include="shangcheng\images\f4.jpg" />
+    <Content Include="shangcheng\images\f5.jpg" />
+    <Content Include="shangcheng\images\f6.jpg" />
+    <Content Include="shangcheng\images\f7.jpg" />
+    <Content Include="shangcheng\images\f8.jpg" />
+    <Content Include="shangcheng\images\f9.jpg" />
+    <Content Include="shangcheng\images\icon.png" />
+    <Content Include="shangcheng\images\icon1.png" />
+    <Content Include="shangcheng\images\icon2.png" />
+    <Content Include="shangcheng\images\icon3.png" />
+    <Content Include="shangcheng\images\icon4.png" />
+    <Content Include="shangcheng\images\icon5.png" />
+    <Content Include="shangcheng\images\icon6.png" />
+    <Content Include="shangcheng\images\icon7.png" />
+    <Content Include="shangcheng\images\icon8.png" />
+    <Content Include="shangcheng\images\icon9.png" />
+    <Content Include="shangcheng\images\icon_radio3.png" />
+    <Content Include="shangcheng\images\icon_radio4.png" />
+    <Content Include="shangcheng\images\member_top_bg.png" />
+    <Content Include="shangcheng\images\m_login_logo_0.png" />
+    <Content Include="shangcheng\images\recommend_shop_icon.png" />
+    <Content Include="shangcheng\images\s1.jpg" />
+    <Content Include="shangcheng\images\s2.jpg" />
+    <Content Include="shangcheng\images\s3.jpg" />
+    <Content Include="shangcheng\images\shop_apply_icon.png" />
+    <Content Include="shangcheng\images\title.jpg" />
+    <Content Include="shangcheng\images\title1.jpg" />
+    <Content Include="shangcheng\images\top.png" />
+    <Content Include="shangcheng\index.html" />
+    <Content Include="shangcheng\info.html" />
+    <Content Include="shangcheng\js\comment.js" />
+    <Content Include="shangcheng\js\jquery-1.10.1.min.js" />
+    <Content Include="shangcheng\js\mui.js" />
+    <Content Include="shangcheng\js\mui.min.js" />
+    <Content Include="shangcheng\js\shop.js" />
+    <Content Include="shangcheng\shopAddress.html" />
+    <Content Include="shangcheng\login.html" />
+    <Content Include="shangcheng\member.html" />
+    <Content Include="shangcheng\reg.html" />
+    <Content Include="shangcheng\shapcar.html" />
+    <Content Include="shangcheng\shop.html" />
+    <Content Include="haitao\fonts\mui-icons-extra.ttf" />
+    <Content Include="haitao\fonts\mui.ttf" />
+    <Content Include="haitao\images\icon\Thumbs.db" />
+    <Content Include="haitao\images\Thumbs.db" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Test\Index.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Test\home.cshtml" />
+    <Content Include="shangcheng\fonts\mui.ttf" />
+    <Content Include="shangcheng\manifest.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>22607</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:22607/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

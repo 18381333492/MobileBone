@@ -1,0 +1,65 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>个人信息</title>
+    <meta name="Keywords" content="" />
+    <meta name="description" content="" />
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript">
+	        !function(J){function H(){var d=E.getBoundingClientRect().width;var e=(d/7.5>100*B?100*B:(d/7.5<42?42:d/7.5));E.style.fontSize=e+"px",J.rem=e}var G,F=J.document,E=F.documentElement,D=F.querySelector('meta[name="viewport"]'),B=0,A=0;if(D){var y=D.getAttribute("content").match(/initial\-scale=([\d\.]+)/);y&&(A=parseFloat(y[1]),B=parseInt(1/A))}if(!B&&!A){var u=(J.navigator.appVersion.match(/android/gi),J.navigator.appVersion.match(/iphone/gi)),t=J.devicePixelRatio;B=u?t>=3&&(!B||B>=3)?3:t>=2&&(!B||B>=2)?2:1:1,A=1/B}if(E.setAttribute("data-dpr",B),!D){if(D=F.createElement("meta"),D.setAttribute("name","viewport"),D.setAttribute("content","initial-scale="+A+", maximum-scale="+A+", minimum-scale="+A+", user-scalable=no"),E.firstElementChild){E.firstElementChild.appendChild(D)}else{var s=F.createElement("div");s.appendChild(D),F.write(s.innerHTML)}}J.addEventListener("resize",function(){clearTimeout(G),G=setTimeout(H,300)},!1),J.addEventListener("pageshow",function(b){b.persisted&&(clearTimeout(G),G=setTimeout(H,300))},!1),H()}(window);
+	        if (typeof(M) == 'undefined' || !M){
+	            window.M = {};
+	        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <div class="header-left">
+            <a class="sb-back" href="javascript:history.back(-1)" title="返回"></a>
+        </div>
+        <div class="header-middle">
+            个人信息
+        </div>
+        <div class="header-right">
+            <aside class="show-menu-btn">
+            </aside>
+        </div>
+    </div>
+    <div class="mui-page-content">
+        <div>
+            <div class="mui-scroll">
+                <ul class="mui-table-view">
+                    <li class="mui-table-view-cell t-line ">
+                        <a id="head" class="mui-navigate-right">
+                            头像
+                            <span class="mui-pull-right head">
+                                <img class="head-img mui-action-preview" id="head-img1" src="" />
+                            </span>
+                        </a>
+                    </li>
+                    <li class="mui-table-view-cell t-line">
+                        <a>姓名<span class="mui-pull-right">艾薇儿</span></a>
+                    </li>
+                    <div class="b-line"></div>
+                </ul>
+                <ul class="mui-table-view t-line">
+                    <li class="mui-table-view-cell b-line">
+                        <a>QQ号<span class="mui-pull-right">88888888</span></a>
+                    </li>
+                    <li class="mui-table-view-cell b-line">
+                        <a>手机<span class="mui-pull-right">885444444</span></a>
+                    </li>
+                    <li class="mui-table-view-cell b-line">
+                        <a>邮箱地址<span class="mui-pull-right">haitao@me.com</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
