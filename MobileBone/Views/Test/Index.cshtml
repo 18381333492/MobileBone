@@ -21,12 +21,17 @@
 </body>
 </html>
 <script type="text/javascript">
-    $('#test').on("click", function () {
-        Mobilebone.ajax({
-            url: '/Test/home',
-            success: function () {
-                alert($('#home').text());
-            }
+    $(function () {
+        $('#test').on("click", function () {
+            Mobilebone.ajax({
+                url: '/Test/home',
+                success: function () {
+                    alert("fdsf");
+                }
+            });
         });
-    });
+    })
+ 
+
+    
 </script>
