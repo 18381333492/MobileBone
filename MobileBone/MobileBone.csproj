@@ -573,6 +573,13 @@
     <Content Include="haitao\fonts\mui.ttf" />
     <Content Include="haitao\images\icon\Thumbs.db" />
     <Content Include="haitao\images\Thumbs.db" />
+    <Content Include="大转盘\css\kinerLottery.css" />
+    <Content Include="大转盘\imgs\lotteryBtn.png" />
+    <Content Include="大转盘\imgs\lotteryContent.png" />
+    <Content Include="大转盘\index.html" />
+    <Content Include="大转盘\js\kinerLottery.js" />
+    <Content Include="大转盘\js\zepto.min.js" />
+    <Content Include="大转盘\www.jq22.com.txt" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="shangcheng\jquery-1.10.2.min.js" />
@@ -623,6 +630,7 @@
     <Content Include="Views\Test\home.cshtml" />
     <Content Include="shangcheng\fonts\mui.ttf" />
     <Content Include="shangcheng\manifest.json" />
+    <Content Include="大转盘\jquery插件库.url" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
