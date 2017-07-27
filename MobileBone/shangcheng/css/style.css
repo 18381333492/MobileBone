@@ -284,17 +284,7 @@ position: relative;}
 .order-list-top li{ width:20%; float:left; height:45px; text-align:center;}
 .order-together-group .order-list-top li{ width:25%;}
 .order-list-top li a{ display:inline-block; margin:auto;text-align:center; font-size:0.24rem; line-height:43px; color:#222}
-.order-list-top li a.on{border-bottom:2px solid;}
-.order-center-content{ width:100%; overflow:hidden; margin-top:0.4rem;}
-.order-list{ width:100%; overflow:hidden; background:#FFF; margin-bottom:0.4rem; position:relative}
-.order-list:last-child{ margin-bottom:0px;}
-.order-list h2{height:2rem; padding:0 2.5%; background:#fafafa;display: -webkit-box !important;display: box !important;
-position: relative;}
-.order-list h2>a{ display:block;}
-.order-list h2 .shop-icon{ float:left; height:2rem;display: inline-block;margin-right: 6px;vertical-align: middle;background: url(../images/flow/icon_shop.png) center center;width: 18px;background-size: 18px;background-repeat: no-repeat;}
-.order-list h2 span{max-width: 140px; line-height:2rem;font-size: 15px;color: #222;font-weight: normal;display: inline-block;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;}
-.order-list h2.together-group-title span{ max-width:220px;}
-.order-list h2 strong{position: relative;-webkit-box-flex: 1;box-flex: 1; display:block;text-align: right;font-size:15px;line-height:2rem; font-weight:normal;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;}
+
 .no-data-div{ width:90%; margin:0rem auto 0; text-align:center;}
 .no-data-div .no-data-icon { height: 5rem;width: 5rem;line-height: 12rem;text-align: center;display: block;background: #DFE0E8;border-radius: 100%;margin: 0 auto;}
 .no-data-div .no-data-img { margin: 0 auto; }

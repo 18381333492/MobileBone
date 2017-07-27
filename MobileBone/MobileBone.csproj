@@ -580,6 +580,11 @@
     <Content Include="大转盘\js\kinerLottery.js" />
     <Content Include="大转盘\js\zepto.min.js" />
     <Content Include="大转盘\www.jq22.com.txt" />
+    <Content Include="飘赞\images\1.png" />
+    <Content Include="飘赞\images\2.png" />
+    <Content Include="飘赞\images\3.png" />
+    <Content Include="飘赞\index.html" />
+    <Content Include="飘赞\js\jquery.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="shangcheng\jquery-1.10.2.min.js" />
@@ -631,9 +636,11 @@
     <Content Include="shangcheng\fonts\mui.ttf" />
     <Content Include="shangcheng\manifest.json" />
     <Content Include="大转盘\jquery插件库.url" />
+    <Content Include="飘赞\images\Thumbs.db" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="飘赞\css\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
